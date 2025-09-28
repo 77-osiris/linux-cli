@@ -1,0 +1,23 @@
+Linux CLI cheat sheet
+
+searching with find and grep
+navigation cd, pwd, ls, 
+Man page organisation 1-user commands, 2-programming interfaces for kernel system calls, 3-programming interfaces to the C library. 4-special files such as device nodes and drivers, 5-file formats, 6-games and amusements such as screen savers, 7-misellaneous, 8-system adminstration commands
+
+
+
+
+Starting out:
+
+cd - Change directory 
+examples: 
+cd .. (go up a directory to the parent dir) cd /path/path (change to specific directory following the specified path)
+ls (list directory contents) adding -l for long list format and -a for all including hidden files
+ls -la and ls -li (-i for index number of each file, useful when looking at hard and symbolic links)
+ln (make a new link) use case: ln file.ext/dir lnfile/lndir (makes a hard link) use -s to  make a symbolic link
+whatis (one line descriptors for commands e.g whatis bash - GNU Bourne-Again shell)
+
+
+echo can be used for a variety of purposes when it comes to producing an output to the terminal, however redirection can also be used to put to a file.
+echo is compatible with numerical equations eg $(((5 * 5) *3)) produces an output of 75 to the terminal
+echo can also be used with -e to produce special case escape sequences such as \a for a bell, \b for backspace, \n for newline, \r for carriage return and \t for tab
