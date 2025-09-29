@@ -29,7 +29,7 @@ Updated as I progress through *The Linux Command Line* book.
   ```
   
 ## File Control and Manipulation
-  - **mkdir** – create a directory
+- **mkdir** – create a directory
   ```bash
   mkdir (name)	# creates a new directory with a given name
   ```
@@ -45,55 +45,71 @@ Updated as I progress through *The Linux Command Line* book.
   ```bash
   nano (name)  	# opens a file in a text editor. creates one if !file
   ```
+- **cp** – make a copy of a file or directory
+  ```bash
+  cp src dest  	# copy files/directory 
+  ```
+- **mv** – opens a file in a text editor
+  ```bash
+  mv old new  	# opens a file in a text editor. creates one if !file
+  ```
 
   
 ## Searching
 - **find** – find a file or directory on the host machine
   ```bash
-  find 			# will search for a directory and or File
+  find 					# will search for a directory and or File
 	Options - find 'dir'
 			- find file 
 			- find dir file 
   ```
 - **grep** – find matching strings 
   ```bash
-  grep 			# find matching strings in a file or directory name, as well as matching strings in a files content
-  grep -i 		# ignore case sensitivity
-  grep -n 		#
+  grep 							# find matching strings in a file or directory name, as well as matching strings in a files content
+  grep -i 						# ignore case sensitivity
+  grep -r text dir				# search recursively in directory
   ```
 
 
 ## Linking
 - **ln** – create a link 
   ```bash
-  ln link_file link_to_file		# creates a hard link 
+  ln link_file link_to_file		 # creates a hard link 
   ln -s /path/target symlink-name		# creates a symbolic link
   ```
 
 ## Output and Redirection
 - **>** – Redirect stdout to file (overwrite) 
   ```bash
-
+  cat /path/target > output.txt
   ````
+  
 - **>>** – Redirect stdout to file (append) 
   ```bash
-
+  cat /path/target >> output.txt
   ````
+  
 - **2>** – Redirect stderr (overwrite) 
   ```bash
-
+  cat /path/target 2> errors.txt
   ````
+  
 - **2>>** – Redirect stderr (append) 
   ```bash
-  
+  cat /path/target 2>> errors.txt
   ```
+  
+- **&>** – Redirect stdout and stderr (overwrite) 
+
+  
 - **|** – Pipe output to another command
   ```bash
-  
+  cat file | grep string | wc 
   ````
+  
 - **tee** – Write to file and stdout
   ```bash
-  
+  cat file | tee | grep string | 
   ````
   
 ## Help & Documentation
